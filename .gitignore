@@ -1,0 +1,12 @@
+
+target/
+dbt_packages/
+logs/
+.env
+.env.*
+!.env.example
+profiles.yml
+secrets.yml
+venv/
+__pycache__/
+*.pyc

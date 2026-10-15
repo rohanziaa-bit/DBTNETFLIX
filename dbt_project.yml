@@ -1,0 +1,28 @@
+# Project configuration
+name: 'netflix'
+version: '1.0.0'
+profile: 'netflix'
+
+# Paths
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+# Clean targets
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+# Model configurations
+models:
+  netflix:
+    +materialized: view
+
+    dim:
+      +materialized: table
+
+    FCT:
+      +materialized: table

@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: dim_movie
+    description: Dimension table for cleaned movies
+    columns:
+      - name: movie_id
+        description: Primary key of the movie
+        data_tests:
+          - not_null
+          - unique
+
+      - name: movie_title
+        description: Standardized movie title
+        data_tests:
+          - not_null
+
+      - name: genre_array
+        description: List of genres in array format
+
+      - name: genres
+        description: Raw genre string from sources
